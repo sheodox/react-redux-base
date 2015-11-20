@@ -16,7 +16,7 @@ gulp.task('uncompiled', function() {
 });
 
 gulp.task('sass:watch', function() {
-    gulp.watch('./src/sass/**/*.scss', ['sass']);
+    gulp.watch(sassGlob, ['sass']);
 });
 
 
