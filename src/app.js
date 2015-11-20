@@ -6,6 +6,7 @@ import {renderToString} from 'react-dom/server';
 import {createStore, combineReducers} from 'redux';
 import {RoutingContext, match} from 'react-router';
 import routes from './shared/routes';
+import api from './api/api-router';
 import path from 'path';
 
 const app = express();
@@ -15,7 +16,7 @@ app.set('view engine', 'jade');
 
 app.use(express.static(path.join(__dirname, 'client')));
 
-//mount APIs here
+app.use('/api', api);
 
 app.use((req, res) => {
     let dom = '',
