@@ -5,7 +5,7 @@ import React from 'react';
 import {renderToString} from 'react-dom/server';
 import {createStore, combineReducers} from 'redux';
 import {RoutingContext, match} from 'react-router';
-import routes from './shared/router';
+import routes from './shared/routes';
 import path from 'path';
 
 const app = express();
