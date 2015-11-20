@@ -10,15 +10,19 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('./build/sass'));
 });
 
-gulp.task('sass:watch', function() {
-    gulp.watch('./src/sass/**/*.scss', ['sass']);
-});
-
 gulp.task('uncompiled', function() {
     gulp.src(uncompiledGlob)
         .pipe(gulp.dest('./build'));
 });
 
+gulp.task('sass:watch', function() {
+    gulp.watch('./src/sass/**/*.scss', ['sass']);
+});
+
+
 gulp.task('uncompiled:watch', function() {
     gulp.watch(uncompiledGlob, ['uncompiled']);
 });
+
+gulp.task('run-all', ['sass', 'uncompiled']);
+gulp.task('watch-all', ['sass:watch', 'uncompiled:watch']);
