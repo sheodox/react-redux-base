@@ -1,10 +1,6 @@
 export default (dispatch, components, params) => {
     const needs = components.reduce((done, current) => {
-        let wrapped = current.WrappedComponent;
-
-        return (current.needs || [])
-            .concat((wrapped ? wrapped.needs : []) || [])
-            .concat(done);
+        return current ? (current.needs || []).concat(done) : done;
     }, []);
 
     const promises = needs.map(need => dispatch(need(params)));
