@@ -4,6 +4,7 @@ import morgan from 'morgan';
 import React from 'react';
 import {renderToString} from 'react-dom/server';
 import {RoutingContext, match} from 'react-router';
+import {Provider} from 'react-redux';
 import createLocation from 'history/lib/createLocation';
 import routes from './shared/routes';
 import api from './api/api-router';
