@@ -8,10 +8,10 @@ import {Provider} from 'react-redux';
 import createLocation from 'history/lib/createLocation';
 import routes from './shared/routes';
 import api from './api/api-router';
-import createStoreWithMiddleware from './middleware/middleware';
+import createStoreWithMiddleware from './shared/middleware/middleware';
 import fetchComponentData from './shared/fetchComponentData';
 import path from 'path';
-import reducers from './reducers/reducers';
+import reducers from './shared/reducers/reducers';
 
 const app = express();
 
