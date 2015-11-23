@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import * as actions from '../actions/actions';
+import actions from '../actions/actions';
 
 class App extends Component {
     static needs = [
@@ -12,7 +12,7 @@ class App extends Component {
     }
     render() {
         return (
-            <h1>{this.props.greeting}</h1>
+            <h1>{this.props.greeting.get('phrase')}</h1>
         );
     }
 }
