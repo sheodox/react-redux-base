@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions/actions';
 
-@connect (state => ({greeting: state.greeting}))
 class App extends Component {
     static needs = [
         actions.getGreeting
@@ -18,4 +17,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default connect(state => ({greeting: state.greeting}))(App);
