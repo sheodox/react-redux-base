@@ -1,5 +1,5 @@
-import getGreetings from './greetingActions'
+import getGreeting from './greetingActions'
 
 export default {
-    getGreetings
+    getGreeting
 }
