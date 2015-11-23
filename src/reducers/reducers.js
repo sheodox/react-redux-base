@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux';
 
-import greetingReducer from './greetingReducer';
+import greeting from './greetingReducer';
 
 export default combineReducers({
-    greeting: greetingReducer
+    greeting
 });
