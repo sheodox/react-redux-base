@@ -45,7 +45,7 @@ app.use((req, res) => {
                     );
 
                     dom = renderToString(view);
-                    bootstrap = store.getState();
+                    bootstrap = JSON.stringify(store.getState());
 
                     res.render('index', {dom, bootstrap});
                 })
