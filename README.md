@@ -18,7 +18,6 @@ This is likely one of the more over-architected Hello World apps you've seen, bu
     |   app.js - server
     +---api
     |       api-router.js - router for all top-level APIs
-    |       hello.js - 
     +---client
     |       client.js - (webpack entry) the only JS file on the client
     |       immutify.js - turns the initial state from the server into Immutable objects
