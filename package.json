@@ -1,7 +1,7 @@
 {
-  "name": "universal-react-kit",
+  "name": "react-redux-base",
   "version": "0.0.1",
-  "description": "A template for react/redux/react-router projects",
+  "description": "A base for react/redux/react-router projects",
   "main": "index.js",
   "private": true,
   "scripts": {
