@@ -45,10 +45,9 @@ Currently building is split between npm scripts and gulp.
 
 * `npm run build` - compile JS with babel (+watch)
 * `npm run bundle` - compile/bundle the client side JS with webpack (+watch)
-* `gulp sass` - compile sass (sass:watch to watch for changes)
-* `gulp uncompiled` - copy all non-js/non-sass files to /build (uncompiled:watch to watch for changes)
+* `gulp sass` - compile sass (+watch)
+* `gulp uncompiled` - copy all non-js/non-sass files to /build (+watch)
 * `gulp run-all` - runs sass and uncompiled
-* `gulp watch-all` - watcher for sass and uncompiled
 
 ## Run
 

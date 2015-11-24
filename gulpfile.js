@@ -4,13 +4,13 @@ var gulp = require('gulp'),
     sassGlob = './src/sass/**/*.scss',
     uncompiledGlob = './src/**/*.!(js|scss)';
 
-gulp.task('sass', function() {
+gulp.task('sass-compile', function() {
     gulp.src(sassGlob)
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./build/sass'));
 });
 
-gulp.task('uncompiled', function() {
+gulp.task('uncompiled-copy', function() {
     gulp.src(uncompiledGlob)
         .pipe(gulp.dest('./build'));
 });
@@ -24,5 +24,6 @@ gulp.task('uncompiled:watch', function() {
     gulp.watch(uncompiledGlob, ['uncompiled']);
 });
 
+gulp.task('sass', ['sass-compile', 'sass:watch']);
+gulp.task('uncompiled', ['uncompiled-copy', 'uncompiled:watch']);
 gulp.task('run-all', ['sass', 'uncompiled']);
-gulp.task('watch-all', ['sass:watch', 'uncompiled:watch']);
